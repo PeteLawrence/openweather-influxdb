@@ -3,7 +3,7 @@ FROM node:14 AS BUILD_IMAGE
 
 WORKDIR /app
 
-COPY ./src /app
+COPY ./src/ /app
 
 RUN npm install
 RUN npm prune --production
