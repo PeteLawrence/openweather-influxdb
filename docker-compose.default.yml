@@ -1,0 +1,16 @@
+version: '3'
+services:
+  openweather:
+    build: .
+    container_name: openweather
+    restart: always
+    network_mode: host
+    environment:
+      - INFLUXDB_HOST=
+      - INFLUXDB_DATABASE=openweather
+      - INFLUXDB_USERNAME=
+      - INFLUXDB_PASSWORD=
+      - LOOP_MINS=5
+      - WEATHER_LAT=51.50
+      - WEATHER_LON=-0.12
+      - WEATHER_KEY=
